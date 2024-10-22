@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/image1.png">
+            </div>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Training & Internship</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="typing">Training & Internship</h1>
+             <p>
+                Embark on a journey of growth and innovation with our comprehensive virtual training and 
+                internship programs.
+            </p>
+        </div>  
+    </section>
+
+<section>
+  <div class="heading">
+    <h4>We look forward to welcoming you to our Training and Internship Program and helping you
+        take the next step in your career.</h4>
+  </div>
+     
+        <div class="cards">
+            <div class="card">
+                <img src="images/image3.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Master the art of creating dynamic and responsive websites.</p>
+                <a href="#" class="btn">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="images/image4.png" alt="Python Development">
+                <h3>Python Development</h3>
+                <p>Dive into the world of Python, versatile and powerful programming language.</p>
+                <a href="#" class="btn">Apply Now</a>
+            </div>
+            <div class="card">
+                <img src="images/image5.png" alt="JAVA Development">
+                <h3>JAVA Development</h3>
+                <p>Become proficient in Java, a robust and widely-used programming language.</p>
+                <a href="#" class="btn">Apply Now</a>
+            </div>
+        </div>    
+</section>
+
+<section class="features-section">
+    <h2>What We Have Here for You</h2>
+    <p class="intro-text">With real-world applications and expert guidance, our programs offer an unparalleled opportunity for growth and professional development.</p>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <h3>Flexible Learning:</h3>
+            <p>Our virtual programs offer flexible schedules.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-users"></i></div>
+            <h3>Training by Industry Trainers:</h3>
+            <p>Benefit from high-quality training delivered by industry experts.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Real-World Projects:</h3>
+            <p>Gain hands-on experience by working on real-world projects.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Certificate of Internship:</h3>
+            <p>Certificate of Internship upon completing your task and assessments.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Certificate of Training:</h3>
+            <p>Certificate of Training upon completing your coursework and assessments.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Evaluation Report:</h3>
+            <p>Feedback on your performance with a detailed evaluation report.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-trophy"></i></div>
+            <h3>Goodies for Top Candidates:</h3>
+            <p>Top-performing candidates will receive exciting goodies reward excellence.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <h3>Full-Time Opportunity:</h3>
+            <p>Exceptional interns may be offered full-time opportunities.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="cont">
+        <div class="image-container">
+            <img src="images/image6.png" alt="Area">
+        </div>
+        <div class="program-description">
+            <h2>Program Description</h2>
+            <ul>
+                <li><strong>Real-World Projects:</strong> Hands-on experience with projects that reflect current industry challenges and practices.</li>
+                <li><strong>Mentorship:</strong> Guidance from experienced professionals to help interns navigate project tasks and overcome challenges.</li>
+                <li><strong>Collaboration:</strong> Opportunities to work in teams, fostering teamwork and knowledge sharing.</li>
+            </ul>
+            <button>Get Your Place <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+<script>
+// Wait for DOM content to load
+document.addEventListener('DOMContentLoaded', () => {
+    const imageContainer = document.querySelector('.image-container');
+    const programDescription = document.querySelector('.program-description');
+    
+    // Get total scrollable height
+    const documentHeight = document.body.scrollHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollableHeight = documentHeight - viewportHeight;
+
+    // Function to set dynamic animation duration based on scroll time
+    const setDynamicAnimation = () => {
+        const scrollTop = window.scrollY;
+        const scrollPercentage = scrollTop / scrollableHeight; // Get how much the user has scrolled
+        
+        // Define max and min animation durations (adjust as needed)
+        const minDuration = 0.5; // seconds
+        const maxDuration = 3; // seconds
+        
+        // Calculate new animation duration based on the scroll percentage
+        const animationDuration = Math.max(minDuration, maxDuration * scrollPercentage);
+        
+        // Set the duration dynamically in CSS for each element
+        imageContainer.style.transitionDuration = `${animationDuration}s`;
+        programDescription.style.transitionDuration = `${animationDuration}s`;
+    };
+    
+    // Update animation duration as the user scrolls
+    window.addEventListener('scroll', setDynamicAnimation);
+    
+    // IntersectionObserver to trigger animations when in viewport
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate'); // Add class to trigger animation
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger when 20% of the element is visible
+
+    // Observe the elements
+    observer.observe(imageContainer);
+    observer.observe(programDescription);
+});
+
+    </script>
+
+</section>
+
+<section>
+
+    <div class="cd">
+        <div class="cd-item">
+        <h1>Frequently Asked Questions</h1>
+        
+        <p>We hope this FAQ helps answer your questions. If you need more information, please feel free to contact us.</p>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <h3>What is the duration of the training and internship program?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>The duration of our training and internship program is 1, 2 & 3 month.</p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <div class="faq-question">
+            <h3>What topics will be covered during the training?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>The training program covers key concepts and practical applications in the chosen domain. 
+                This includes theoretical knowledge, hands-on projects, and live training sessions conducted by industry professionals.</p> 
+          </div>
+        </div>
+    
+        <div class="faq">
+          <div class="faq-question">
+            <h3>Will I receive a certificate upon completion of the internship?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, upon successful completion of the training and internship program, you will receive 3 certificates recognizing your internship, training and evaluation report.</p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <div class="faq-question">
+            <h3>What kind of projects will I work on during the internship?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>During the internship, you will work on real-world projects related to your domain of study. These projects are designed to give you practical experience and help you apply the skills learned during the training..</p>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+    
+        faqQuestions.forEach(question => {
+          question.addEventListener('click', () => {
+            question.parentNode.classList.toggle('active');
+          });
+        });
+      </script>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>TECHOCTANET SERVICES PVT LTD</h3>
+            <p>
+        &#9658;Partner with OctaNet and unlock the full potential of technology to propel your business
+            forward. Let's embark on a journey of innovation, growth, and success together.
+            </p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Training & Internship</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Important Links</h3>
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Partners</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Let's Connect!</h3>
+            <p>We are passionate about driving success through technology.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2024 OctaNet</p>
+        <p>Powered by OctaNet</p>
+    </div>
+</footer>
+    
+
+ 
+</body>
+</html>
