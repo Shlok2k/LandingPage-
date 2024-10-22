@@ -1,0 +1,484 @@
+/* Basic Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #f0f0f0; 
+    padding-bottom: 0px; 
+}
+
+.logo{
+    margin-left: 80px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px; 
+    margin: -70px;
+    padding: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 60;
+    display: flex;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 1rem 1rem;
+}
+
+nav ul li a {
+    transition: background-color 0.5s;
+    border-radius: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color:  #0069d9;
+    color: #ffffff;
+  }
+
+
+/* Hero Section */
+.hero {
+    background-image: url('images/image2.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: flex-end;
+    padding: 7rem 0; 
+    position: relative; 
+}
+
+#typing {
+    font-size: 48px;
+    white-space: nowrap; /* Ensure the text doesn't wrap */
+    overflow: hidden; /* Hide overflow while typing */
+    border-right: none; /*No cursor effect  */
+    width: fit-content;
+    animation: typing 2.5s steps(40, end); /* Typing animation */
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 1; 
+    margin: 25px;
+    cursor: hidden;
+    
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Cards Section */
+.heading{
+    margin-top: 15px;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 20px;
+    justify-content: space-evenly;
+}
+
+/* @keyframes appear{
+    from{
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+.card{
+    animation: appear linear;
+    animation-timeline: view;
+    animation-range: entry 0% cover 40%;
+} */
+
+
+.card {
+    width: 250px;
+    border: 10px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 7px #007bff;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.card h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3207f0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.btn:hover {
+    background-color: #0069d9;
+}
+
+/* section for count*/
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.features-section h2 {
+    color: #58b4f0;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 7px #007bff;
+}
+
+.feature-card .icon {
+    background-color: #58b4f0;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Container styling */
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Image container default state */
+.image-container {
+    flex: 1;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50px); /* Slide from the left initially */
+    transition: opacity 0.8s ease-out, transform 1.2s ease-out;
+}
+
+.image-container.animate {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+/* Program description default state */
+.program-description {
+    flex: 1.5;
+    background-color: #007bff;
+    color: white;
+    padding: 60px;
+    opacity: 0;
+    transform: translateX(50px); /* Slide from the right initially */
+    transition: opacity 0.8s ease-out, transform 1.2s ease-out;
+}
+
+.program-description.animate {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
+}
+
+.program-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.program-description ul {
+    list-style: disc;
+    padding: 0;
+}
+
+.program-description ul li {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.program-description button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.program-description button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.cd {
+    /* background: #fff; */
+    margin-left: 190px;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 1100px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+
+  }
+
+  .cd-item h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .cd-item p{
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  } 
+
+  .faq {
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .faq-question h3 {
+    margin: 0;
+    color: #3498db;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    padding: 15px;
+    background: #f9f9f9;
+    display: none;
+  }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #3498db;
+  }
+
+  .faq.active .faq-question::after {
+    content: '-';
+    
+  }
+
+  .faq.active .faq-answer {
+    display: block;
+  }
+
+  .footer {
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-column p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #e0e0e0;
+}
+
+/* Social Icons */
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Makes icons white */
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #004c99;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: #d0d0d0;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    justify-content: space-between;
+}
